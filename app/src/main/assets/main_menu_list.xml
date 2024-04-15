@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<main_menu>
+    <activity>
+        <title>动画效果</title>
+        <jump>com.helloz.app.ui.submenu.AnimationActivity</jump>
+    </activity>
+
+    <activity>
+        <title>动画效果</title>
+        <jump>com.helloz.app.ui.submenu.AnimationActivity</jump>
+    </activity>
+
+    <activity>
+        <title>动画效果</title>
+        <jump>com.helloz.app.ui.submenu.AnimationActivity</jump>
+    </activity>
+</main_menu>

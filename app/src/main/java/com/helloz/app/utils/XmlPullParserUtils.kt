@@ -32,7 +32,7 @@ class XmlPullParserUtils {
                     // when 等价于 switch
                     when (event) {
                         XmlPullParser.START_TAG -> {
-                            if ("activity" == pullParser.name) {
+                            if ("item" == pullParser.name) {
                                 menuModel = MenuModel()
                             }
                             if ("title" == pullParser.name) {
@@ -44,7 +44,7 @@ class XmlPullParserUtils {
                         }
 
                         XmlPullParser.END_TAG -> {
-                            if ("activity" == pullParser.name && menuModel != null) {
+                            if ("item" == pullParser.name && menuModel != null) {
                                 menuList.add(menuModel)
                                 menuModel = null
                             }

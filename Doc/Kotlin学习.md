@@ -52,3 +52,39 @@ inner class MyClickListener() : OnItemClickListener {
     }
 }
 ```
+
+## kotlin 实现静态的方式
+
+@JvmField + @JvmStatic 注解
+上面我们见识了 companion object 伴随对象，那么 kotlin 是不是真的无法实现 static 了，也不是，kotlin 还是提供了相关办法，这就是 @JvmField + @JvmStatic 注解，其意思是声明成员和方法使用 JVM 提供的特性
+
+@JvmField - 修饰静态变量
+@JvmStatic - 修饰静态方法
+@JvmField 和 @JvmStatic 只能写在 object 修饰的类或者 companion object 里，写法虽然有些别扭，但是效果是真的是按 static 来实现的
+我们把上面的代码修改下：
+
+
+class BookKotlin {
+
+    companion object {
+
+        @JvmField
+        var nameStatic: String = "BB"
+
+        @JvmStatic
+        fun speakStatic() {
+        }
+    }
+
+    var name: String = "AA"
+
+    fun speak() {}
+}
+
+# 状态栏与应用内容重叠
+
+当系统状态栏与您的Android应用内容发生重叠时，这通常是由于布局配置不当或适配策略未正确实施导致的。为了解决这个问题，您可以采取以下几种方法：
+
+1. 设置`fitsSystemWindows`属性
+    
+    在您的根布局（通常是`CoordnatorLayout`, `DrawerLayout`, 或者 `ConstraintLayout`等）中设置`android:fitsSystemWindows="true"`。此属性告诉系统您的布局应该考虑系统窗口（如状态栏、导航栏等）的存在，并在绘制时为这些区域留出空间。同时，为了防止内容被系统窗口裁剪，确保您的根布局或其直接子布局具有`android:clipToPadding="false"`（或省略，因为默认就是false）。

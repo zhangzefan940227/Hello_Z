@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<basis_menu>
+    <item>
+        <title>Activity</title>
+        <jump>com.helloz.app.ui.submenu.AnimationActivity</jump>
+    </item>
+</basis_menu>

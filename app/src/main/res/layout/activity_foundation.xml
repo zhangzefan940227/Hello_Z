@@ -3,14 +3,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/main"
+        android:id="@+id/foundation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".ui.main.MainActivity">
+        tools:context=".ui.submenu.FoundationActivity">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_menu_rv"
+            android:id="@+id/foundation_menu_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintTop_toTopOf="parent" />

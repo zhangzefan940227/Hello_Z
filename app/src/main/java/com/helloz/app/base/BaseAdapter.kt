@@ -13,7 +13,7 @@ import com.helloz.app.interfaces.OnItemClickListener
  * @date: 2024年4月13日
  * @description: 定义一个基础的Adapter
  */
-open class MyBaseAdapter<T : Any>(
+open class BaseAdapter<T : Any>(
     private var mList: List<T>,
     private var mBindDataListener: IBindDataListener<T>
 ) : RecyclerView.Adapter<BaseViewHolder>() {

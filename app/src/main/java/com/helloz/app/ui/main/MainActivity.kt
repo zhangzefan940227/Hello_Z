@@ -3,6 +3,7 @@ package com.helloz.app.ui.main
 import android.os.Bundle
 
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.helloz.app.R

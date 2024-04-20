@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
-
+        <activity
+            android:name=".ui.foundation.MyFirstActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.submenu.AnimationActivity"
             android:exported="false" />
@@ -24,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.submenu.FoundationActivity"
             android:exported="false" />

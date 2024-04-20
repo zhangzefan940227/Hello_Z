@@ -3,6 +3,6 @@
 <basis_menu>
     <item>
         <title>Activity</title>
-        <jump>com.helloz.app.ui.submenu.AnimationActivity</jump>
+        <jump>com.helloz.app.ui.foundation.MyFirstActivity</jump>
     </item>
 </basis_menu>

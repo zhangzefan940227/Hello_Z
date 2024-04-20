@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Hello_Z</string>
+    <string name="enter_something">请输入.</string>
+    <string name="send">发送</string>
+    <string name="jump">跳转</string>
 </resources>

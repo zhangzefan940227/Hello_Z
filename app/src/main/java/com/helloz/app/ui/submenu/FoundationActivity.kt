@@ -8,6 +8,12 @@ import com.helloz.app.base.BaseActivity
 import com.helloz.app.databinding.ActivityFoundationBinding
 import com.helloz.app.utils.MenuUtils
 
+/**
+ * @author: zzfan
+ * @date: 2024年4月20日
+ * @description: 四大基本组件菜单界面
+ */
+
 class FoundationActivity : BaseActivity() {
     private val TAG = "FoundationActivity"
     private lateinit var mFoundationBinding: ActivityFoundationBinding
@@ -24,7 +30,6 @@ class FoundationActivity : BaseActivity() {
         mFoundationBinding.foundationMenuRv.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         mFoundationBinding.foundationMenuRv.adapter = mBaseAdapter
-        // 设置点击事件监听器
         setOnClickListener(this, mBaseAdapter)
     }
 }

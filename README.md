@@ -1,5 +1,11 @@
-# Hello_Z
+# Hello_Z介绍
 
+## 主界面入口
+```text
+com.helloz.app/.ui.main.MainActivity
+```
+
+# 其他
 ## 无线adb方式
 
 1. 打开手机设置，进入开发者选项，打开USB调试，并选择“ADB调试”；
@@ -18,3 +24,5 @@ adb tcpip 5555;restarting in TCP mode port: 5555
 adb shell ifconfig wlan0
 ```
 5. 命令输入 `adb connect <ip>` 将刚刚的ip地址填入
+
+6. 之后如果手机的ip不变，每次连接都只需要输入 `adb connect <ip>` 即可

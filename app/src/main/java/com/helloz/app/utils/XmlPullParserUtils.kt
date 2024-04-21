@@ -32,14 +32,18 @@ class XmlPullParserUtils {
                     // when 等价于 switch
                     when (event) {
                         XmlPullParser.START_TAG -> {
-                            if ("item" == pullParser.name) {
-                                menuModel = MenuModel()
-                            }
-                            if ("title" == pullParser.name) {
-                                menuModel?.setTitle(pullParser.nextText())
-                            }
-                            if ("jump" == pullParser.name) {
-                                menuModel?.setJumpToWhere(Class.forName(pullParser.nextText()))
+                            when (pullParser.name) {
+                                MenuUtils.ITEM -> {
+                                    menuModel = MenuModel()
+                                }
+
+                                MenuUtils.TITLE -> {
+                                    menuModel?.setTitle(pullParser.nextText())
+                                }
+
+                                MenuUtils.JUMP_TO_WHERE -> {
+                                    menuModel?.setJumpToWhere(Class.forName(pullParser.nextText()))
+                                }
                             }
                         }
 

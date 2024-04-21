@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
         <activity
-            android:name=".ui.foundation.MyFirstActivity"
+            android:name=".ui.foundation.MySecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.foundation.FoundationFirstActivity"
             android:exported="false" />
         <activity
             android:name=".ui.submenu.AnimationActivity"

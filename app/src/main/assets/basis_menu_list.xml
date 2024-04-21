@@ -3,6 +3,11 @@
 <basis_menu>
     <item>
         <title>Activity</title>
-        <jump>com.helloz.app.ui.foundation.FoundationFirstActivity</jump>
+        <jump>com.helloz.app.ui.foundation.activities.FoundationFirstActivity</jump>
+    </item>
+    <item>
+        <title>Service</title>
+        <jump>com.helloz.app.ui.foundation.services.StartServerActivity</jump>
+
     </item>
 </basis_menu>

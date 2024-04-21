@@ -2,7 +2,7 @@
 
 <main_menu>
     <item>
-        <title>四大基本组件</title>
+        <title>基础功能</title>
         <jump>com.helloz.app.ui.submenu.FoundationActivity</jump>
     </item>
 

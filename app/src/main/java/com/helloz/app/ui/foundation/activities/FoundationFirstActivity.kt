@@ -1,4 +1,4 @@
-package com.helloz.app.ui.foundation
+package com.helloz.app.ui.foundation.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -38,7 +38,6 @@ class FoundationFirstActivity : BaseActivity(), View.OnClickListener {
 
         mToastBtn.setOnClickListener(this)
         mJumpBtn.setOnClickListener(this)
-
     }
 
     /**
@@ -58,9 +57,14 @@ class FoundationFirstActivity : BaseActivity(), View.OnClickListener {
             }
 
             R.id.jump_btn -> {
-                val intent: Intent = Intent(this, MySecondActivity::class.java)
+                val myIntent: Intent = Intent(this, MySecondActivity::class.java)
                 intent.putExtra(CommonUtils.TOAST, mToastText)
                 startActivity(intent)
+
+                // 隐式调用
+                // val myIntent: Intent = Intent("com.helloz.foundation.second.ACTION_SECOND")
+                // intent.addCategory("com.helloz.foundation.second.CATEGORY_SECOND")
+                // startActivity(intent)
             }
         }
     }

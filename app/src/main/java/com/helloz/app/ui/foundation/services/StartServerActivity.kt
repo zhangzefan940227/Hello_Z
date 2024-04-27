@@ -81,6 +81,9 @@ class StartServerActivity : BaseActivity(), View.OnClickListener {
         localBroadcastManager.registerReceiver(updateUiReceiver, IntentFilter(CommonUtils.ACTION_UPDATE_UI))
     }
 
+    /**
+     * 点击事件
+     */
     override fun onClick(v: View?) {
         val intent = Intent(this, MyService::class.java)
         when (v?.id) {
@@ -114,6 +117,9 @@ class StartServerActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * 通过TextView实时打印Service绑定的状态
+     */
     fun updateContent(content: String) {
         mContent += content
         mContentTv.text = mContent

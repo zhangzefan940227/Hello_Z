@@ -9,7 +9,7 @@ import com.helloz.app.base.BaseActivity
 import com.helloz.app.databinding.ActivityFoundationSecondBinding
 import com.helloz.app.utils.CommonUtils
 
-class MySecondActivity : BaseActivity() {
+class FoundationSecondActivity : BaseActivity() {
     private val TAG = "MySecondActivity"
     private lateinit var mMySecondBinding: ActivityFoundationSecondBinding
     private lateinit var mTextView: TextView

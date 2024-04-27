@@ -57,14 +57,17 @@ class FoundationFirstActivity : BaseActivity(), View.OnClickListener {
             }
 
             R.id.jump_btn -> {
-                val myIntent: Intent = Intent(this, MySecondActivity::class.java)
-                intent.putExtra(CommonUtils.TOAST, mToastText)
-                startActivity(intent)
-
-                // 隐式调用
-                // val myIntent: Intent = Intent("com.helloz.foundation.second.ACTION_SECOND")
-                // intent.addCategory("com.helloz.foundation.second.CATEGORY_SECOND")
-                // startActivity(intent)
+                if (true) {
+                    // 显式调用
+                    val myIntent: Intent = Intent(this, FoundationSecondActivity::class.java)
+                    myIntent.putExtra(CommonUtils.TOAST, mToastText)
+                    startActivity(myIntent)
+                } else {
+                    // 隐式调用
+                    val myIntent: Intent = Intent("com.helloz.foundation.second.ACTION_SECOND")
+                    myIntent.putExtra(CommonUtils.TOAST, mToastText)
+                    startActivity(myIntent)
+                }
             }
         }
     }

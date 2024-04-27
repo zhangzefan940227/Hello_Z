@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
+        <activity
+            android:name=".ui.foundation.brocasts.BroadCastActivity"
+            android:exported="false" />
+
         <service
             android:name=".ui.foundation.services.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity
             android:name=".ui.main.MainActivity"
@@ -32,12 +36,12 @@
             android:name=".ui.foundation.services.StartServerActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.foundation.activities.MySecondActivity"
-            android:exported="false">
+            android:name=".ui.foundation.activities.FoundationSecondActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.helloz.foundation.second.ACTION_SECOND" />
 
-                <category android:name="android.intent.category.MY_CATEGORY" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity

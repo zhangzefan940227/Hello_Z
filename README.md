@@ -15,8 +15,9 @@ com.helloz.app/.ui.main.MainActivity
 结果
 
 ```bash
-adb tcpip 5555;restarting in TCP mode port: 5555
+adb tcpip 5555;
 ```
+restarting in TCP mode port: 5555
 
 4. 查看手机ip
 

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
         <activity
-            android:name=".ui.foundation.brocasts.BroadCastActivity"
+            android:name=".ui.foundation.broadcasts.BroadCastActivity"
             android:exported="false" />
 
         <service

@@ -3,4 +3,6 @@
     <string name="enter_something">请输入</string>
     <string name="toast">弹窗</string>
     <string name="jump">跳转</string>
+    <string name="default_val">default</string>
+    <string name="broadcast_tips">通过监听系统广播实时获取当前时间 \n 每分钟更新一次</string>
 </resources>

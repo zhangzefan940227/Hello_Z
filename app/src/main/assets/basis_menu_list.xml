@@ -10,4 +10,8 @@
         <jump>com.helloz.app.ui.foundation.services.StartServerActivity</jump>
 
     </item>
+    <item>
+        <title>Broadcast</title>
+        <jump>com.helloz.app.ui.foundation.broadcasts.BroadCastActivity</jump>
+    </item>
 </basis_menu>

@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".ui.foundation.brocasts.BroadCastActivity">
+        tools:context=".ui.foundation.broadcasts.BroadCastActivity">
 
         <EditText
             android:id="@+id/broadcast_content_et"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="通过监听系统广播实时获取当前时间"
+            android:text="@string/default_val"
             android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/send_broadcast_btn" />
 
@@ -48,9 +48,10 @@
             >
 
             <TextView
+                android:id="@+id/time_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hello world"
+                android:text="@string/default_val"
                 android:textSize="50sp"
                 android:padding="10dp"
                 android:gravity="center" />

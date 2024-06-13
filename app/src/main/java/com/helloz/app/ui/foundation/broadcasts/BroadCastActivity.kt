@@ -43,11 +43,6 @@ class BroadCastActivity : BaseActivity() {
         registerReceiver()
     }
 
-    override fun onResume() {
-        super.onResume()
-
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         unregisterReceiver(mMyBroadcastReceiver)
@@ -92,7 +87,6 @@ class BroadCastActivity : BaseActivity() {
         registerReceiver(mMyBroadcastReceiver, intentFilter, RECEIVER_NOT_EXPORTED)
     }
 
-
     inner class MyBroadcastReceiver : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent?.action == TIME_CHANGED_ACTION) {
@@ -105,5 +99,4 @@ class BroadCastActivity : BaseActivity() {
             }
         }
     }
-
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
         <activity
+            android:name=".ui.foundation.contentproviders.ContentProvidersActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.foundation.broadcasts.BroadCastActivity"
             android:exported="false" />
 

@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Hello_Z"
 include(":app")
- 
+include(":lib")

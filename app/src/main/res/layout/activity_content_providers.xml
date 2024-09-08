@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="拨打10086"
+            android:text="@string/call_10086"
             android:theme="@style/buttonStyle"
             app:cornerRadius="12dp"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="自定义ContentProvider"
+            android:text="@string/custom_contentProvider"
             android:theme="@style/buttonStyle"
             app:cornerRadius="12dp"
             app:layout_constraintTop_toBottomOf="@+id/call_10086" />

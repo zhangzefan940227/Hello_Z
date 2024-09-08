@@ -5,4 +5,7 @@
     <string name="jump">跳转</string>
     <string name="default_val">default</string>
     <string name="broadcast_tips">通过监听系统广播实时获取当前时间 \n 每分钟更新一次</string>
+    <string name="call_10086">拨打10086</string>
+    <string name="custom_contentProvider">自定义ContentProvider</string>
+    <string name="request_baidu">获取百度信息</string>
 </resources>

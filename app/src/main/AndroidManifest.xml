@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,13 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
-        <activity
-            android:name=".ui.foundation.contentproviders.ContentProvidersActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.foundation.broadcasts.BroadCastActivity"
-            android:exported="false" />
-
         <service
             android:name=".ui.foundation.services.MyService"
             android:enabled="true"
@@ -53,6 +48,19 @@
         <activity
             android:name=".ui.submenu.AnimationActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.network.OKHttpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.submenu.NetworkStructureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.foundation.contentproviders.ContentProvidersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.foundation.broadcasts.BroadCastActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

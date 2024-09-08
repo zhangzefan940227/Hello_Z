@@ -7,8 +7,8 @@
     </item>
 
     <item>
-        <title>动画效果</title>
-        <jump>com.helloz.app.ui.submenu.AnimationActivity</jump>
+        <title>网络请求</title>
+        <jump>com.helloz.app.ui.submenu.NetworkStructureActivity</jump>
     </item>
 
     <item>

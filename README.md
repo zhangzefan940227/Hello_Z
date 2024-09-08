@@ -27,3 +27,13 @@ adb shell ifconfig wlan0
 5. 命令输入 `adb connect <ip>` 将刚刚的ip地址填入
 
 6. 之后如果手机的ip不变，每次连接都只需要输入 `adb connect <ip>` 即可
+
+## 提交模板
+
+```text
+Description:添加okhttp示例
+Feature or Bugfix:Feature
+Data:2024年9月8日
+
+Change-Id:
+```

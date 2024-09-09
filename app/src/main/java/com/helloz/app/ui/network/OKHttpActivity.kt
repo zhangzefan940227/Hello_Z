@@ -28,55 +28,59 @@ class OKHttpActivity : BaseActivity() {
     private fun init() {
         mOkHttpBinding = DataBindingUtil.setContentView(this, R.layout.activity_okhttp)
         mOkHttpClient = OkHttpClient.Builder().build()
-        mOkHttpBinding.okhttpBtn.setOnClickListener {
-            Log.d(TAG, "init: build request")
-            requestBaidu()
+        mOkHttpBinding.okhttpBtnSync.setOnClickListener {
+            Log.d(TAG, "init: build request sync")
+            request(true)
+        }
+        mOkHttpBinding.okhttpBtnAsync.setOnClickListener {
+            Log.d(TAG, "init: build request async")
+            request(false)
         }
     }
 
-    private fun requestBaidu() {
+    private fun request(isSyncRequest: Boolean) {
 
         // 表单数据
         val formBody = FormBody.Builder().add("test", "这是一个测试参数").build()
-
-        // 构建请求
-        val request = Request.Builder()
+        val request: Request = Request.Builder()
             .url("https://www.baidu.com")
             .post(formBody)
             .build()
 
-        /*
-                // 同步请求
-                Thread {
-                    try {
-                        // 发送请求，并拿到响应
-                        val response = mOkHttpClient!!.newCall(request).execute()
+        // 构建请求
+        if (isSyncRequest) {
+            // 同步请求
+            Thread {
+                try {
+                    // 发送请求，并拿到响应
+                    val response = mOkHttpClient!!.newCall(request).execute()
 
-                        // 打印响应体数据
-                        val responseBody = response.body?.string()
-                        runOnUiThread {
-                            mOkHttpBinding.responseBodyTv.text = responseBody
-                        }
-                    } catch (e: IOException) {
-                        e.printStackTrace()
+                    // 打印响应体数据
+                    val responseBody = response.body?.string()
+                    runOnUiThread {
+                        mOkHttpBinding.responseBodyTv.text = responseBody
                     }
-                }.start()
-        */
-        // 异步请求
-        mOkHttpClient?.newCall(request)?.enqueue(object : Callback {
-            override fun onResponse(call: Call, response: Response) {
-                // 发送请求，并拿到响应
-                val response = mOkHttpClient!!.newCall(request).execute()
-                // 打印响应体数据
-                val responseBody = response.body?.string()
-                runOnUiThread {
-                    mOkHttpBinding.responseBodyTv.text = responseBody
+                } catch (e: IOException) {
+                    e.printStackTrace()
                 }
-            }
+            }.start()
+        } else {
+            // 异步请求
+            mOkHttpClient?.newCall(request)?.enqueue(responseCallback = object : Callback {
+                override fun onResponse(call: Call, response: Response) {
+                    // 发送请求，并拿到响应
+                    val response = mOkHttpClient!!.newCall(request).execute()
+                    // 打印响应体数据
+                    val responseBody = response.body?.string()
+                    runOnUiThread {
+                        mOkHttpBinding.responseBodyTv.text = responseBody
+                    }
+                }
 
-            override fun onFailure(call: Call, e: java.io.IOException) {
-                Log.d(TAG, "onResponse: failure")
-            }
-        })
+                override fun onFailure(call: Call, e: java.io.IOException) {
+                    Log.d(TAG, "onResponse: failure")
+                }
+            })
+        }
     }
 }

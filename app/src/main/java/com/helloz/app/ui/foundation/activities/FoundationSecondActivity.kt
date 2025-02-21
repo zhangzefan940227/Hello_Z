@@ -8,9 +8,10 @@ import com.helloz.app.R
 import com.helloz.app.base.BaseActivity
 import com.helloz.app.databinding.ActivityFoundationSecondBinding
 import com.helloz.app.utils.CommonUtils
+import com.helloz.app.utils.LogUtils
 
 class FoundationSecondActivity : BaseActivity() {
-    private val TAG = "MySecondActivity"
+    private val tag = this::class.simpleName ?: ""
     private lateinit var mMySecondBinding: ActivityFoundationSecondBinding
     private lateinit var mTextView: TextView
     private lateinit var mMyIntent: Intent
@@ -22,6 +23,7 @@ class FoundationSecondActivity : BaseActivity() {
     }
 
     private fun init() {
+        LogUtils.i(tag, "init")
         mMyIntent = intent
         mTextView = mMySecondBinding.text
     }

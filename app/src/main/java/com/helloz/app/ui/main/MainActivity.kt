@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.helloz.app.R
 import com.helloz.app.base.BaseActivity
 import com.helloz.app.databinding.ActivityMainBinding
+import com.helloz.app.utils.LogUtils
 import com.helloz.app.utils.MenuUtils
 
 /**
@@ -17,7 +18,7 @@ import com.helloz.app.utils.MenuUtils
  * @description: 应用主界面
  */
 class MainActivity : BaseActivity() {
-    private val TAG = "MainActivity"
+    private val tag = "MainActivity"
 
     // lateinit 用于延迟初始化变量, 在声明时不立即初始化，而是延迟到使用时再初始化。
     private lateinit var mMainBinding: ActivityMainBinding
@@ -29,6 +30,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun init() {
+        LogUtils.i(tag, "init")
         // 通过DataBindingUtil.setContentView方法将activity_main.xml布局文件绑定到Activity，并获取Activity的根视图。
         mMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         // 初始化菜单列表

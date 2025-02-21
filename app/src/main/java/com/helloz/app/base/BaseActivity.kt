@@ -17,6 +17,11 @@ import com.helloz.app.utils.MenuUtils
 import com.helloz.app.utils.XmlPullParserUtils
 import java.util.Objects
 
+/**
+ * BaseActivity 是应用程序中所有菜单 Activity 的基类。
+ * 该类封装了通用的 Activity 行为和方法，以便于子类继承和复用。
+ * 通过继承 BaseActivity，子类可以快速实现常用的功能，如生命周期管理、视图初始化等。
+ */
 open class BaseActivity : AppCompatActivity() {
     private val TAG = "BaseActivity"
 
@@ -62,8 +67,7 @@ open class BaseActivity : AppCompatActivity() {
      */
     fun getMenuModelList(path: String): List<MenuModel> {
         try {
-            val menuStream =
-                Objects.requireNonNull(javaClass.classLoader).getResourceAsStream(path)
+            val menuStream = Objects.requireNonNull(javaClass.classLoader).getResourceAsStream(path)
             return XmlPullParserUtils.getMenuList(menuStream)
         } catch (e: Exception) {
             e.printStackTrace()
@@ -82,7 +86,25 @@ open class BaseActivity : AppCompatActivity() {
         return BaseAdapter(menuModelList,
             object : BindDataListenerImpl<MenuModel>(R.id.menu_item_tv, R.layout.menu_item, R.id.menu_item_tv) {
                 override fun onBindViewHolder(model: MenuModel, viewHolder: BaseViewHolder?, type: Int, position: Int) {
-                    viewHolder?.setText(R.id.menu_item_tv, model.getTitle().toString())
+                    viewHolder?.setText(R.id.menu_item_tv, model.title.toString())
+                }
+            })
+    }
+
+    /**
+     * 获取一个用于展示菜单列表的网格适配器。
+     *
+     * 该函数根据传入的菜单模型列表创建一个 BaseAdapter 实例，用于在网格布局中展示菜单项。
+     * 适配器会使用自定义的 BindDataListenerImpl 来绑定数据到视图上。
+     *
+     * @param menuModelList 包含菜单模型的列表，每个 MenuModel 对象代表一个菜单项。
+     * @return 返回一个 BaseAdapter<MenuModel> 实例，用于在网格布局中展示菜单项。
+     */
+    fun getGridAdapter(menuModelList: List<MenuModel>): BaseAdapter<MenuModel> {
+        return BaseAdapter(menuModelList,
+            object : BindDataListenerImpl<MenuModel>(R.id.sub_menu_btn, R.layout.sub_menu_item, R.id.sub_menu_btn) {
+                override fun onBindViewHolder(model: MenuModel, viewHolder: BaseViewHolder?, type: Int, position: Int) {
+                    viewHolder?.setText(R.id.sub_menu_btn, model.title.toString())
                 }
             }
         )
@@ -97,8 +119,8 @@ open class BaseActivity : AppCompatActivity() {
     fun setOnClickListener(context: Context, adapter: BaseAdapter<MenuModel>) {
         adapter.setClickListener(object : OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
-                LogUtils.i(TAG, "onItemClick: ")
-                val intent = Intent(context, mMenuModelList[position].getJumpToWhere())
+                LogUtils.i(TAG, "onItemClick, view: {$view}" )
+                val intent = Intent(context, mMenuModelList[position].jumpActivity)
                 startActivity(intent)
             }
         })

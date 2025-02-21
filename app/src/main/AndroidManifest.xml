@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.submenu.FoundationActivity"
+            android:name=".ui.submenu.BasicToolsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.foundation.services.StartServerActivity"

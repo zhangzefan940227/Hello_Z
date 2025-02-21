@@ -33,20 +33,13 @@ class XmlPullParserUtils {
                     when (event) {
                         XmlPullParser.START_TAG -> {
                             when (pullParser.name) {
-                                MenuUtils.ITEM -> {
-                                    menuModel = MenuModel()
-                                }
-
-                                MenuUtils.TITLE -> {
-                                    menuModel?.setTitle(pullParser.nextText())
-                                }
-
+                                MenuUtils.ITEM -> { menuModel = MenuModel("", null) }
+                                MenuUtils.TITLE -> { menuModel?.title = pullParser.nextText() }
                                 MenuUtils.JUMP_TO_WHERE -> {
-                                    menuModel?.setJumpToWhere(Class.forName(pullParser.nextText()))
+                                    menuModel?.jumpActivity = Class.forName(pullParser.nextText())
                                 }
                             }
                         }
-
                         XmlPullParser.END_TAG -> {
                             if ("item" == pullParser.name && menuModel != null) {
                                 menuList.add(menuModel)

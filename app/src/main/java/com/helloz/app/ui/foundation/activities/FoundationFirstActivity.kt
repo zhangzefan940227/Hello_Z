@@ -12,9 +12,10 @@ import com.helloz.app.R
 import com.helloz.app.base.BaseActivity
 import com.helloz.app.databinding.ActivityFoundationFirstBinding
 import com.helloz.app.utils.CommonUtils
+import com.helloz.app.utils.LogUtils
 
 class FoundationFirstActivity : BaseActivity(), View.OnClickListener {
-    private val TAG = "MyFirstActivity"
+    private val tag = "MyFirstActivity"
     private lateinit var mMyFirstBinding: ActivityFoundationFirstBinding
     private lateinit var mEditText: EditText
     private lateinit var mToastBtn: Button
@@ -31,6 +32,7 @@ class FoundationFirstActivity : BaseActivity(), View.OnClickListener {
      * 初始化视图
      */
     private fun initView() {
+        LogUtils.i(tag, "init")
         mMyFirstBinding = DataBindingUtil.setContentView(this, R.layout.activity_foundation_first)
         mEditText = mMyFirstBinding.editText
         mToastBtn = mMyFirstBinding.toastBtn

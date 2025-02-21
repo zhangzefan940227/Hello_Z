@@ -3,7 +3,7 @@
 <main_menu>
     <item>
         <title>基础功能</title>
-        <jump>com.helloz.app.ui.submenu.FoundationActivity</jump>
+        <jump>com.helloz.app.ui.submenu.BasicToolsActivity</jump>
     </item>
 
     <item>

@@ -14,4 +14,8 @@
         <title>Broadcast</title>
         <jump>com.helloz.app.ui.foundation.broadcasts.BroadCastActivity</jump>
     </item>
+    <item>
+        <title>桌面悬浮窗</title>
+        <jump></jump>
+    </item>
 </basis_menu>

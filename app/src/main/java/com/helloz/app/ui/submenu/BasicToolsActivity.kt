@@ -3,7 +3,6 @@ package com.helloz.app.ui.submenu
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.helloz.app.R
 import com.helloz.app.base.BaseActivity
 import com.helloz.app.databinding.ActivityBasicToolsBinding

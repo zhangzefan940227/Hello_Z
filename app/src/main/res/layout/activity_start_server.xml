@@ -8,7 +8,7 @@
         android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.foundation.services.StartServerActivity">
+        tools:context=".ui.basic.services.StartServerActivity">
 
         <LinearLayout
             android:layout_width="match_parent"

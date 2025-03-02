@@ -9,4 +9,7 @@
     <string name="custom_contentProvider">自定义ContentProvider</string>
     <string name="request_baidu_sync">同步获取百度信息</string>
     <string name="request_baidu_async">异步获取百度信息</string>
+    <string name="lifecycle_activity">Activity生命周期</string>
+    <string name="lifecycle_observer">观察者观察到的生命周期</string>
+    <string name="dialog_button">点击弹框</string>
 </resources>

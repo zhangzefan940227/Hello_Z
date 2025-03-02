@@ -21,4 +21,10 @@
         <item name="cornerRadius">15dp</item>
         <item name="android:backgroundTint">@color/light_blue</item>
     </style>
+
+    <style name="textStyle" parent="Base.Theme.Hello_Z" >
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginVertical">5dp</item>
+    </style>
 </resources>

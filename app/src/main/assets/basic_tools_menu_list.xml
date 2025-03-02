@@ -1,21 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
+<basic_menu>
+    <item>
+        <title>ActivityTest</title>
+        <jump>com.helloz.app.ui.basic.activities.FoundationFirstActivity</jump>
+    </item>
+    <item>
+        <title>ServiceTest</title>
+        <jump>com.helloz.app.ui.basic.services.StartServerActivity</jump>
 
-<basis_menu>
-    <item>
-        <title>Activity</title>
-        <jump>com.helloz.app.ui.foundation.activities.FoundationFirstActivity</jump>
     </item>
     <item>
-        <title>Service</title>
-        <jump>com.helloz.app.ui.foundation.services.StartServerActivity</jump>
-
+        <title>BroadcastTest</title>
+        <jump>com.helloz.app.ui.basic.broadcasts.BroadCastActivity</jump>
     </item>
     <item>
-        <title>Broadcast</title>
-        <jump>com.helloz.app.ui.foundation.broadcasts.BroadCastActivity</jump>
+        <title>FloatingClock</title>
+        <jump>com.helloz.app.ui.tools.FloatingClockActivity</jump>
     </item>
     <item>
-        <title>桌面悬浮窗</title>
-        <jump>com.helloz.app.ui.foundation.floating.FloatingActivity</jump>
+        <title>LifeCycleTest</title>
+        <jump>com.helloz.app.ui.basic.lifecycle.LifecycleActivity</jump>
     </item>
-</basis_menu>
+</basic_menu>

@@ -1,4 +1,4 @@
-package com.helloz.app.ui.foundation.services
+package com.helloz.app.ui.basic.services
 
 import android.content.BroadcastReceiver
 import android.content.ComponentName

@@ -1,15 +1,12 @@
-package com.helloz.app.ui.foundation.services
+package com.helloz.app.ui.basic.services
 
 import android.app.Service
 import android.content.Intent
-import android.os.Binder
 import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.os.Message
-import android.widget.TextView
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.helloz.app.R
 import com.helloz.app.utils.CommonUtils
 import java.lang.ref.WeakReference
 

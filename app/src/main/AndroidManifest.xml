@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_Z">
         <service
-            android:name=".ui.foundation.services.MyService"
+            android:name=".ui.basic.services.MyService"
             android:enabled="true"
             android:exported="true" />
 
@@ -28,13 +28,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.submenu.BasicToolsActivity"
+            android:name=".ui.submenu.BasicFunctionsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.foundation.services.StartServerActivity"
+            android:name=".ui.basic.services.StartServerActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.foundation.activities.FoundationSecondActivity"
+            android:name=".ui.basic.activities.FoundationSecondActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.helloz.foundation.second.ACTION_SECOND" />
@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.foundation.activities.FoundationFirstActivity"
+            android:name=".ui.basic.activities.FoundationFirstActivity"
             android:exported="false" />
         <activity
             android:name=".ui.submenu.AnimationActivity"
@@ -55,15 +55,17 @@
             android:name=".ui.submenu.NetworkStructureActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.foundation.contentproviders.ContentProvidersActivity"
+            android:name=".ui.basic.contentproviders.ContentProvidersActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.foundation.broadcasts.BroadCastActivity"
+            android:name=".ui.basic.broadcasts.BroadCastActivity"
             android:exported="false" />
         <activity
             android:name=".ui.tools.FloatingClockActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".ui.basic.lifecycle.LifecycleActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

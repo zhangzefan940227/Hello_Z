@@ -21,7 +21,7 @@ class XmlPullParserUtils {
         @JvmStatic
         @Throws(IOException::class, XmlPullParserException::class)
         fun getMenuList(xml: InputStream?): List<MenuModel> {
-            val menuList: MutableList<MenuModel> = ArrayList<MenuModel>()
+            val menuList: MutableList<MenuModel> = ArrayList()
             var menuModel: MenuModel? = null
             val pullParser = Xml.newPullParser()
             try {

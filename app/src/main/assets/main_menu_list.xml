@@ -2,8 +2,8 @@
 
 <main_menu>
     <item>
-        <title>基础功能</title>
-        <jump>com.helloz.app.ui.submenu.BasicToolsActivity</jump>
+        <title>基础功能学习</title>
+        <jump>com.helloz.app.ui.submenu.BasicFunctionsActivity</jump>
     </item>
 
     <item>

@@ -1,4 +1,4 @@
-package com.helloz.app.ui.foundation.activities
+package com.helloz.app.ui.basic.activities
 
 import android.content.Intent
 import android.os.Bundle

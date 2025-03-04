@@ -12,4 +12,5 @@
     <string name="lifecycle_activity">Activity生命周期</string>
     <string name="lifecycle_observer">观察者观察到的生命周期</string>
     <string name="dialog_button">点击弹框</string>
+    <string name="clock_switch_content">悬浮时钟开关</string>
 </resources>

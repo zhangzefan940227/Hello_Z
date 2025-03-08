@@ -13,4 +13,11 @@
     <string name="lifecycle_observer">观察者观察到的生命周期</string>
     <string name="dialog_button">点击弹框</string>
     <string name="clock_switch_content">悬浮时钟开关</string>
+    <string name="clock_text_size">字体大小</string>
+    <string name="clock_text_color">字体颜色</string>
+    <string name="clock_text_color_hint">请输入RGB值</string>
+    <string name="clock_bg_color">背景颜色</string>
+    <string name="clock_bg_color_et">请输入ARGB值</string>
+    <string name="confirm">确认</string>
+    <string name="reset">重置</string>
 </resources>

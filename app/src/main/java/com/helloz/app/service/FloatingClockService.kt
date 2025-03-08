@@ -14,6 +14,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import com.helloz.app.R
+import java.lang.ref.WeakReference
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -23,13 +24,15 @@ import java.util.Date
  */
 class FloatingClockService : Service() {
 
-    private lateinit var windowManager: WindowManager
-    public lateinit var layoutParams: WindowManager.LayoutParams
     private lateinit var displayView: View
+    private lateinit var windowManager: WindowManager
+    private lateinit var layoutParams: WindowManager.LayoutParams
 
     companion object {
         private val tag: String = this::class.simpleName ?: "FloatingClockService"
         var isStarted = false
+        public lateinit var weakRefView: WeakReference<View>
+        public lateinit var weakRefWindowManager:WeakReference<WindowManager>
     }
 
     override fun onCreate() {
@@ -58,6 +61,7 @@ class FloatingClockService : Service() {
         isStarted = true
         // 获取WindowManager服务
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
+        weakRefWindowManager = WeakReference(windowManager)
         // 初始化LayoutParams对象
         layoutParams = WindowManager.LayoutParams()
         // 设置窗口类型
@@ -70,7 +74,7 @@ class FloatingClockService : Service() {
         layoutParams.flags =
             WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
         // 设置窗口的宽度和高度
-        layoutParams.width = 400;
+        layoutParams.width = 800;
         layoutParams.height = 200;
         // 设置窗口的初始位置
         layoutParams.x = 0;
@@ -88,10 +92,11 @@ class FloatingClockService : Service() {
             val layoutInflater = LayoutInflater.from(this);
             // 加载悬浮窗布局
             displayView = layoutInflater.inflate(R.layout.image_diaplay, null);
+            weakRefView = WeakReference(displayView)
             // 设置触摸监听器，使悬浮窗可以拖动
             displayView.setOnTouchListener(FloatingOnTouchListener());
             // 获取TextView控件
-            val textView: TextView = displayView.findViewById(R.id.textView);
+            val textView: TextView = displayView.findViewById(R.id.clock_widget_tv);
 
             // 创建Handler对象
             val handler: Handler = Handler(Looper.getMainLooper());
@@ -106,7 +111,7 @@ class FloatingClockService : Service() {
                     // 设置TextView的文本内容
                     textView.setText(formattedTime + "");
                     // 延迟1秒后再次执行
-                    handler.postDelayed(this, 10);
+                    handler.postDelayed(this, 50);
                 }
             })
 

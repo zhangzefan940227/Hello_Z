@@ -13,7 +13,6 @@ import com.helloz.app.impl.BindDataListenerImpl
 import com.helloz.app.interfaces.OnItemClickListener
 import com.helloz.app.model.MenuModel
 import com.helloz.app.utils.LogUtils
-import com.helloz.app.utils.MenuUtils
 import com.helloz.app.utils.XmlPullParserUtils
 import java.util.Objects
 
